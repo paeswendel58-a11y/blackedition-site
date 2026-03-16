@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Black Edition</title>
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <img src="logo-be.jpeg" alt="Black Edition" class="logo-img" />
+        <span class="logo-text">Black <span class="accent">Edition</span></span>
+      </div>
+      <nav>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#ferramentas">Ferramentas</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <video class="hero-bg-video" autoplay muted loop playsinline>
+      <source src="Final3.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-video-mask"></div>
+    <div class="hero-glow"></div>
+    <div class="carbon-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">Edição Profissional</div>
+      <h1>Black<br/><span class="accent">Edition</span></h1>
+      <p>Transformamos suas ideias em conteúdo visual de alto impacto. Vídeos para redes sociais.</p>
+      <a href="#portfolio" class="btn-primary">Ver Portfólio</a>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="section-header">
+      <h2>Portfólio</h2>
+      <p>Confira alguns dos nossos trabalhos</p>
+    </div>
+
+    <div class="video-grid" id="videoGrid"></div>
+
+    <div class="add-video-wrapper">
+      <button class="btn-add" id="addVideoBtn">+ Adicionar Vídeo</button>
+    </div>
+  </section>
+
+  <!-- FERRAMENTAS -->
+  <section id="ferramentas" class="tools-section">
+    <div class="section-header">
+      <h2>Ferramentas que <span class="accent">Utilizamos</span></h2>
+      <p>Software profissional para resultados excepcionais</p>
+    </div>
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-icon-wrap">
+          <img src="Premiere.png" />
+        </div>
+        <span>Premiere Pro</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon-wrap">
+          <img src="Photoshop.png" />
+        </div>
+        <span>Photoshop</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon-wrap">
+          <img src="After.png" />
+        </div>
+        <span>After Effects</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon-wrap">
+          <img src="Capcut.webp" />
+        </div>
+        <span>CapCut</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon-wrap">
+          <img src="Canva.webp" />
+        </div>
+        <span>Canva</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon-wrap">
+          <img src="Grok.jpg" />
+        </div>
+        <span>Grok IA</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre-section">
+    <div class="sobre-inner">
+      <div class="sobre-text">
+        <h2>Sobre a <span class="accent">Black Edition</span></h2>
+        <p>Somos especializados em edição de conteúdo vertical (9:16).</p>
+        <p>Com técnicas avançadas de corte, colorização e motion graphics.</p>
+      </div>
+
+      <div class="sobre-stats">
+        <div class="stat">
+          <span class="stat-num">200+</span>
+          <span class="stat-label">Vídeos Editados</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Clientes</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">1+</span>
+          <span class="stat-label">Anos de Experiência</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato-section">
+    <h2>Entre em <span class="accent">Contato</span></h2>
+    <p>Solicite um orçamento ou tire suas dúvidas</p>
+
+    <form class="contato-form">
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea placeholder="Descreva seu projeto..." rows="5" required></textarea>
+      <button type="submit" class="btn-primary">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Black Edition — Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- MODAL DE UPLOAD -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+
+      <h3>Adicionar Vídeo</h3>
+
+      <div class="video-upload">
+        <input type="file" id="videoFile" accept="video/mp4,video/webm">
+      </div>
+
+      <button class="btn-primary" id="saveVideoBtn">Salvar Vídeo</button>
+    </div>
+  </div>
+
+  <!-- MODAL VISUALIZAÇÃO -->
+  <div class="modal-overlay" id="viewOverlay">
+    <div class="modal modal-view">
+      <button class="modal-close" id="viewClose">✕</button>
+
+      <div class="view-video-wrap" id="viewVideoWrap"></div>
+
+      <div class="view-actions">
+        <button class="btn-delete" id="deleteBtn">Excluir</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
